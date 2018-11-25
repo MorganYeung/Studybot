@@ -15,12 +15,40 @@ const lib = require('lib')({token: process.env.STDLIB_TOKEN});
 * @param {string} botToken The bot token for the Slack bot you have activated
 * @returns {object}
 */
+
 module.exports = (user, channel, text = '', command = {}, botToken = null, callback) => {
   callback(null, {
-    text: `Question1`,
-    attachments: [
+    "text": "okay, Question 1:",
+/*
+    "attachments": [
+      "text": "Answer",
+            "callback_id": "ans",
+            "color": "#3AA3E3",
+            "attachment_type": "default",
+            "actions": [
+                {
+                    "name": "answer",
+                    "text": "a",
+                    "type": "button",
+                    "value": "a"
+                },
+                {
+                    "name": "answer",
+                    "text": "b",
+                    "type": "button",
+                    "value": "b"
+                },
+                {
+                    "name": "answer",
+                    "text": "c",
+                    "type": "button",
+                    "value": "c"
+                }
+            ]
+    ]
+    */
       // You can customize your messages with attachments.
       // See https://api.slack.com/docs/message-attachments for more info.
-    ]	
+
   });
 };
